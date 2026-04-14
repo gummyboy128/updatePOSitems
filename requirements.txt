@@ -1,0 +1,6 @@
+playwright
+openpyxl
+coloredlogs
+pandas
+
+# After installing, run: playwright install chromium
