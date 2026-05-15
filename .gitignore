@@ -1,0 +1,22 @@
+# Input spreadsheets
+*.xlsx
+
+# Run result logs
+*_results.txt
+
+# Generated output directories
+reports/
+screenshots/
+archive/
+exclude(Temporary)/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+
+# Playwright
+playwright-report/
+test-results/

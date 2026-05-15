@@ -57,7 +57,7 @@ class Config:
 
 # ==================== Supplier Mapping ====================
 SUPPLIER_MAP: Dict[str, str] = {
-    'ck': 'CK',
+    'hw': 'Heartwarmers',
     'fruits_xs': 'SKC Trading',
     'ugroup': 'U-Group Holdings',
     'legacy': 'Legacy Food',
@@ -415,6 +415,7 @@ class OSPOSAutomation:
                 )
 
             await submit_button.click()
+            await asyncio.sleep(1)
             await self._verify_success_message(f"You have successfully added item {product.name}")
             logger.info(f"Created new item: {product.name}")
 
@@ -447,7 +448,7 @@ class OSPOSAutomation:
             await name_input.clear()
             await name_input.fill(product.name)
             await submit_button.click()
-
+            await asyncio.sleep(1)
             await self._verify_success_message("You have successfully updated item")
             logger.info(f"Updated item name: {product.name}")
         except Exception as e:
@@ -531,6 +532,7 @@ class OSPOSAutomation:
                     ))
 
                 await submit_button.click()
+                await asyncio.sleep(1)
                 await self._verify_success_message("You have successfully updated item")
                 updated_items.append(product.name)
 
